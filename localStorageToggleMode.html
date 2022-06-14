@@ -173,7 +173,7 @@ const enableDarkMode = () => {
 
 const disableDarkMode = () => {
   document.body.classList.remove('darkmode');
-  localStorage.setItem('darkMode', null);
+  localStorage.setItem('darkMode', 'disabled');
 }
 if (darkMode === 'enabled') {
   enableDarkMode();
