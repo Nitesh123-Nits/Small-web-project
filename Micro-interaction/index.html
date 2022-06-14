@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: lime;
+      }
+      h1{
+        position: relative;
+        padding: .8rem;
+        background-color: rgb(233, 21, 127);
+        max-width: fit-content;
+        color:antiquewhite;
+        transition: .5s ease-out;
+        border: 4px solid rgb(24, 4, 112);
+        border-radius:17% 83% 22% 78% / 78% 18% 82% 22%  ;
+      
+      }
+      h1:hover{
+        border-radius: 0% 100% 0% 100% / 100% 0% 100% 0% ;
+        border: 0;
+      }
+      
+
+      h1:hover  span.one{
+        position: absolute;
+        left:0;
+        bottom:0;
+        width:4px;
+        height:0px;
+        background-color: rgb(43, 7, 77);
+        animation: an .5s  ;
+        animation-fill-mode: forwards;
+        transform-origin: bottom;
+      }
+      h1:hover  span.two{
+        position: absolute;
+        left:0;
+        top:0;
+        width:0px;
+        height:4px;
+        background-color: rgb(43, 7, 77);
+        animation: an2 .5s  ;
+        animation-delay: .5s;
+        transform-origin: left;
+        animation-fill-mode: forwards;
+        /* filter: blur(2px); */
+      }
+      h1:hover  span.three{
+       
+       position: absolute;
+       top:0;
+       right: 0;
+       width: 4px;
+       height: 0px;
+       background-color:  rgb(43, 7, 77);
+       animation: an .5s  ;
+       
+       animation-fill-mode: forwards;
+     }
+     h1:hover  span.four{
+       
+       position: absolute;
+       bottom:0;
+       right: 0;
+       width: 0px;
+       height: 4px;
+       background-color: rgb(43, 7, 77);
+       animation: an2 .5s  ;
+       animation-delay: .5s;
+       animation-fill-mode: forwards;
+     }
+      @keyframes an {
+        from{
+          height: 0px;
+        }
+      to{
+          height: 100%;
+        }
+        
+      }
+      @keyframes an2 {
+        from{
+          width: 0px;
+        }
+       to{
+          width: 100%;
+        }
+        
+      }
+    </style>
+</head>
+<body>
+ <h1>Heading1
+   <span
+   class="one"></span>
+   <span class="two"></span>
+   <span class="three"></span>
+   <span class="four"></span>
+ </h1>
+</body>
+</html>

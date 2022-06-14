@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #456;
+        }
+        .container{
+            width: 70%;
+            height: 400px;
+            background-color: aquamarine;
+            padding: 5rem;
+            transform-style: preserve-3d;
+            transition: .4s;
+        }
+        .container:hover{
+            transform: perspective(800px) translateZ(150px) translateX(-65px);
+            box-shadow: 16px 16px 18px rgba(0,0,0,.5);
+        }
+        .box{
+            background-color: blanchedalmond;
+            padding: 2rem;
+            transform-style: preserve-3d;
+            transition: .4s;
+        }
+        .box:hover{
+            transform: perspective(800px) translateZ(50px) translateX(-5px);
+            box-shadow: 6px 6px 8px rgba(0,0,0,.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, saepe qui. Eos placeat vero 
+            similique ipsum eveniet explicabo quibusdam repellendus in id impedit, deleniti laboriosam aspernatur ad nihil magni 
+            odit itaque recusandae error totam.</p></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 45px;
+        }
+        button{
+            border: 0;
+            padding: 0.7rem;
+            background-color: rgb(86, 7, 160);
+            font-size: 1.2rem;
+            color:#ffe;
+            border-radius: .3rem;
+        }
+        #chk{
+            /* visibility: hidden; */
+            display: none;
+        }
+   
+    </style>
+</head>
+<body>
+    
+   <button id="btn"><input type="checkbox" name="" id="chk" >Checkbox</button> 
+   <p>Lorem ipsum dolor sit amet.</p>
+</body>
+</html>
+<script>
+
+
+       const btn=document.getElementById("btn");
+       const chk=document.getElementById("chk");
+       chk.checked=true;
+       btn.addEventListener("click",function(){
+           
+           if(chk.checked==true){
+               document.body.style.backgroundColor="limegreen";
+               chk.checked=false;
+           }
+           else{
+            document.body.style.backgroundColor="#880000";
+            chk.checked=true;
+           }       
+           })
+</script>

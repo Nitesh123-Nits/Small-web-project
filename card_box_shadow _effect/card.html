@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(39, 38, 38);
+        }
+        .card{
+            padding: 1rem;
+            border: 1.5px solid rgb(26, 0, 56);
+            width: 45ch;
+            position: relative;
+            height: 400px;
+            /* box-shadow:4px 4px 0px rebeccapurple; */
+            transition: .5s;
+            background-color:#ffe;
+            perspective: preserve-3d;
+            border:2px solid pink
+            /* backface-visibility: hidden; */
+
+
+        }
+        /* .card::after{
+            content: " ";
+            position: absolute;
+            top:0;
+            right: -10px;
+            height: 100%;
+            width: 10px;
+           transform: rotateX(150deg); 
+            background-color:gray;
+        } */
+        .card:hover{
+            transform: translate(-3px,-3px) ;
+            box-shadow:7px 7px 0px rgb(5, 134, 55),
+            14px 14px 0px rgb(28, 5, 66),
+            21px 21px 0px aqua;
+        }
+        
+        p{
+            line-height: 1.4;
+            font-size: 1.2rem;
+        }
+        h1{
+            margin-bottom: 2rem;
+            font-size:3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <h1>Heading1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt non inventore vel! Lorem ipsum dolor sit amet consectetur adipisicing 
+                elit. Id distinctio repellendus quisquam, blanditiis quas nulla enim, beatae doloribus vitae debitis assumenda? Impedit, unde.</p>
+        </div>
+    </div>
+    
+</body>
+</html>

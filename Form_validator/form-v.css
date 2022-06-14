@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width:450px;
+    height: auto;
+    padding: 0 0 2rem 0;
+    border:2px solid #001858;
+    background-color: #f3d2c1;
+}
+.signupText{
+    text-align: center;
+    margin: 2rem;
+    font-size: 2.1rem;
+    letter-spacing: 1.5px;
+    color:#001858;
+}
+label{
+    font-weight: 500;
+    margin-bottom: .5rem;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+input,select{
+    display: block;
+    font-size:.9rem;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 3rem;
+    padding: .7rem;
+    border: 0;
+    background-color: #8bd3dd;
+    border-radius: .3rem;
+    box-shadow: 1px 1px 1px #001858;
+    outline: none;
+    transition: .3s;
+}
+input:focus{
+    box-shadow: 3px 3px 4px rgba(0,0,0,.3);
+}
+input[type="submit"]{
+    margin: auto;
+    margin-top: 3rem;
+    width: 75%;
+    transition: .3s;
+    
+    background-color: #f582ae;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color:#001858;
+}
+input[type="submit"]:hover{
+    background-color: #e6487f;
+}
+input,select{
+    margin-bottom: .7rem;
+}
+form div{
+    width: 85%;
+    margin:auto;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   :root {
+  --clr-orange: 7 100% 63%;
+  --clr-blue: 239 100% 50%;
+  --spacer: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(24, 23, 23);
+    border: 5px solid #0f0;
+    outline: 4px solid orange;
+    outline-offset: -1rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacer);
+  width: 300px;
+  height: 400px;
+  border-radius: 0.25em;
+  color: white;
+  box-shadow: 0 0 3rem hsl(0 0 0 / 0.2);
+  /* border: 2px solid #222; */
+  transition:all .5s ease;
+}
+
+/* .card > * + * {
+  margin-top: calc(var(--spacer) / 2);
+} */
+
+.card__title {
+  line-height: 1;
+  margin-bottom: max(3rem, 10vmin);
+}
+
+.card p {
+  margin-top: auto;
+}
+
+.increased-legibility {
+  background-image: url(https://images.unsplash.com/photo-1627503218607-0626b62bc1a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyOTgyOTg3Nw&ixlib=rb-1.2.1&q=80&w=400);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.card:hover {
+  box-shadow: 0 0 1rem #0f0;
+  transform: translateY(-3px);
+}
+
+.increased-legibility::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, rgb(0 0 0 / .8), rgb(0 0 0 / 0));
+}
+    </style>
+</head>
+<body>
+    <article class="card increased-legibility">
+        <h2 class="card__title">Fun stuff</h2>
+        <p>Repudiandae corporis voluptatibus praesentium sequi.</p>
+      </article>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #222;
+        }
+        h1{
+            font-size: 4rem;
+            color: blue;
+            text-shadow: 3px 3px 0px lime;
+            /* backdrop-filter: blur(2px); */
+            background-color: rgb(219, 26, 161);
+            transform-style: preserve-3d;
+            transition: .3s;
+        }
+        h1:hover{
+            transform: perspective(800px)  translateZ(12px)  ;
+        }
+        .container{
+           
+            width: 45ch;
+            border:2px solid #af34;
+            margin: 6rem;
+            font-size: 1.3rem;
+            color:#ffe;
+            background: url(img.jpg);
+            background-size: cover;
+            transform-style: preserve-3d;
+            transition: .3s;
+            padding: 2rem;
+           
+
+        }
+        .container:hover{
+            transform: perspective(800px) rotateY(40deg) rotateZ(-3deg)  rotateX(45deg) translateY(-12px) translateX(-12px) ;
+           
+          
+        }
+        .container:hover p{
+            transform: perspective(800px) translateZ(45px);
+            box-shadow: 15px 15px 7px rgba(0,0,0,.5);
+        }
+        .container p{
+            /* backdrop-filter: blur(3px); */
+            padding: 2rem;
+            background-color: rgb(21, 4, 54);
+                    }
+    </style>
+</head>
+<body>
+    <h1>Heading</h1>
+    <div class="container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quis 
+            officia sint voluptatum pariatur corporis saepe, animi quibusdam totam, 
+            rem quidem dolor labore velit, natus vel repellat adipisci cum fugit. Earum fuga dolor accusantium magni
+             accusamus incidunt ad reiciendis, illo laudantium iste, magnam tempora ipsum!</p>
+    </div>
+
+</body>
+</html>

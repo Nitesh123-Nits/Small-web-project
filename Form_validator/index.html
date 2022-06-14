@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form-v.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <section class="container">
+        
+        <form id="form" >
+            <h2 class="signupText">Sign Up</h2>
+         <div><label for="">Full Name</label>
+             <input type="text" name="name"  placeholder="Full name" id="formName" required ></div>
+         <div>
+          <label for="">Email</label>
+         
+         <input type="email" name="_replyto"  placeholder="abc@gmail.com" id="email" required></div>
+         <div>
+             <label for="">Password</label>
+             <input type="password" name="password" id="password" required >
+             <p class="error" id="error"></p>
+            </div>
+         <div>
+             <label for="">Date Of Birth</label>
+             <input type="date"  id="date" required></div>
+         <div>
+             <label for="">Gender</label>
+             <select name="select" id="select" required>
+             <option value="male" name="male">Male</option>
+             <option value="female" name="female">Female</option>
+             </select>
+        </div>
+        
+        <div><input type="submit" name="submit" value="submit"></div>
+        </form>
+    </section>
+</body>
+</html>
+<script>
+     const pwd=document.getElementById("password");
+     const formName=document.getElementById("formName");
+     const email=document.getElementById("email");
+     const form=document.getElementById("form");
+     const date=document.getElementById("date");
+     const error=document.getElementById("error");
+
+   form.addEventListener('submit',function(e){
+  e.preventDefault();
+   check();
+    })
+    function check(){
+        const pwdVal=pwd.value.trim();
+        const formNameVal=formName.value.trim();
+        const emailVal=email.value.trim();
+        
+        if(pwdVal.length<9){
+            pwd.style.border="2px solid red";
+            error.innerText="Minimum length should be 9 character";
+            error.style.color="red";
+            
+            
+        }
+        else if(pwdVal!=''&& pwdVal.length>=9 ){
+            pwd.style.border="2px solid limegreen";
+            error.innerText="";
+           
+        }
+        if(formNameVal==''){
+            formName.style.border="2px solid red";
+          
+        }
+        else if(formNameVal!=''){
+            formName.style.border="2px solid limegreen";
+            
+            
+        }
+        if(emailVal==''){
+            email.style.border="2px solid red";
+           
+            
+        }
+        else if(emailVal!=''){
+        email.style.border="2px solid limegreen";
+        
+           
+        }
+
+
+
+    }
+               
+</script>
